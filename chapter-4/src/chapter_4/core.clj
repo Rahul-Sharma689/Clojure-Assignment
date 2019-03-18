@@ -1,6 +1,7 @@
 (ns chapter-4.core
   (:gen-class))
-
+(def filename "suspects.csv")
+ 
 (defn -main
   [& args]
   (println "Welcome to Chapter 4"))

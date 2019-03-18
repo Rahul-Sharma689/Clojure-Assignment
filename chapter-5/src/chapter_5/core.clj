@@ -1,6 +1,5 @@
 (ns chapter-5.core
   (:gen-class))
- (def filename "suspects.csv")
 
 (defn -main
   [& args]
@@ -23,8 +22,7 @@
  
  
  ; Exercise 3 - Implement the assoc-in function. Hint: use the assoc function and
- 
- (defn my-assoc-in
+(defn my-assoc-in
   [m [k & kws] v]
   (if kws
     (assoc m k (my-assoc-in (get m k) kws v))
