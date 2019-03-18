@@ -53,6 +53,6 @@ def vamp-keys [:name :glitter-index])
 		(if (and (empty? name) (not(empty? value)))
 		(println "validated :name and :glitter-index")))	 
 
-;exercise - 4 Write a function that will take your list of maps and convert it back to a
+;Exercise - 4 Write a function that will take your list of maps and convert it back to a
 (clojure.string/join "," (vals glitter-filter))
 
