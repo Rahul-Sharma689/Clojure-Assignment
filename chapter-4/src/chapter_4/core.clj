@@ -2,19 +2,18 @@
   (:gen-class))
 
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
   (println "Welcome to Chapter 4"))
   
-  (def vamp-keys [:name :glitter-index])
- (defn str->int
+def vamp-keys [:name :glitter-index])
+(defn str->int
 	[str]
 	(Integer. str))
 
 (def conversions {:name identity
 	:glitter-index str->int})
 
- (defn convert
+(defn convert
 	[vamp-key value]
 	((get conversions vamp-key) value))
 
@@ -38,20 +37,20 @@
 	[minimum-glitter records]
 	(filter #(>= (:glitter-index %) minimum-glitter) records))
 
-; Exercise -1 (Turn the result of your glitter filter into a list oxf names.)
+;Exercise -1 (Turn the result of your glitter filter into a list oxf names.)
 (defn turning-glitter-into-name [minimum-glitter records]
-     	 (map :name (filter #(>= (:glitter-index %) minimum-glitter) records)))
+	(map :name (filter #(>= (:glitter-index %) minimum-glitter) records)))
 		 
 ;Exercise -2 Write a function, append, which will append a new suspect to your list of suspect
-		 (defn append-suspect
-         [name glitter-value]
-         (conj (mapify (parse (slurp filename))) {:name name :glitter-index glitter-value}))
-		 
-; Exercise -3 (validated :name and :glitter-index.)	
+(defn append-suspect
+	[name glitter-value]
+		(conj (mapify (parse (slurp filename))) {:name name :glitter-index glitter-value}))
+
+; Exercise -3 (validated :name and :glitter-index.)	(will refactorize)
 (defn validate-values
 	[name glitter-index]
-	(if (and (empty? name) (not(empty? value)))
-	 (println "validated :name and :glitter-index")))	 
+		(if (and (empty? name) (not(empty? value)))
+		(println "validated :name and :glitter-index")))	 
 
 ;exercise - 4 Write a function that will take your list of maps and convert it back to a
 (clojure.string/join "," (vals glitter-filter))

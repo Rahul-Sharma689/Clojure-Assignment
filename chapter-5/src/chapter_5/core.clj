@@ -3,11 +3,10 @@
  (def filename "suspects.csv")
 
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (println "Welcome to Chapter 5"))
 
-  ; Exercise -1 
+; Exercise -1 
 (def character
 	{:name "Smooches McCutes"
 	:attributes {:intelligence 10
@@ -47,7 +46,7 @@
  ; Exercise 4- use the update-in function.
 ;update-in function.
 (def car {:name "Tata-Nexon" :avg 15 :Model 2018})
-(update-in car[:avg] + 10)
+	(update-in car[:avg] + 10)
 
 ; Results
 ;#'user/car
