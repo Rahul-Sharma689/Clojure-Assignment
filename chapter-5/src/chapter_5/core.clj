@@ -50,3 +50,19 @@
 ;#'user/car
 ;{:name "Tata-Nexon", :avg 25, :Model 2018}
 
+;Exercise - 5 
+(defn my-update-in
+  "My Update-in"
+  [m [k & kws] func & args]
+  (assoc m k (apply my-update-in (get m k) kws func args)))
+  
+  (def users {:kyle {
+	:date-joined "2009-01-01"
+	:summary {
+	:average {
+	:monthly 1000
+	:yearly 12000}}}})
+	
+ ; Example- 
+ ;(update-in users [:kyle :summary :average :monthly] + 700)
+
